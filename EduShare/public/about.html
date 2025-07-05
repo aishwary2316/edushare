@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeacherShare - About Teacher</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>TeacherShare</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="auth.html" class="nav-link">Create Class</a>
+                </li>
+                <li class="nav-item">
+                    <a href="coffee.html" class="nav-link">Buy Me a Coffee</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Profile Content -->
+    <main class="about-container">
+        <div id="profile" class="profile-wrapper">
+            <!-- Profile Header -->
+            <div class="profile-header">
+                <div class="profile-image-container">
+                    <img id="profile-image" class="profile-image" src="images/default-profile.png" alt="Teacher Profile">
+                </div>
+                <div class="profile-info">
+                    <h1 id="teacher-name" class="teacher-name">Teacher Profile</h1>
+                    <p id="institute-name" class="institute-name"></p>
+                    <p class="teacher-id-display">Teacher ID: <span id="teacher-id-display"></span></p>
+                </div>
+            </div>
+
+            <!-- Bio Section -->
+            <div class="profile-bio">
+                <h2 class="section-title">About</h2>
+                <p id="teacher-bio" class="bio-text">Loading teacher information...</p>
+            </div>
+
+            <!-- Materials Count -->
+            <div class="materials-section">
+                <h2 class="section-title">Available Materials</h2>
+                <div id="materials-count" class="materials-grid">
+                    <div class="material-card">
+                        <div class="material-icon">📚</div>
+                        <div class="material-info">
+                            <span class="material-type">Books</span>
+                            <span id="books-count" class="material-count">0</span>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-icon">📝</div>
+                        <div class="material-info">
+                            <span class="material-type">Notes</span>
+                            <span id="notes-count" class="material-count">0</span>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-icon">🎥</div>
+                        <div class="material-info">
+                            <span class="material-type">Videos</span>
+                            <span id="videos-count" class="material-count">0</span>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-icon">📋</div>
+                        <div class="material-info">
+                            <span class="material-type">Assignments</span>
+                            <span id="assignments-count" class="material-count">0</span>
+                        </div>
+                    </div>
+                    <div class="material-card">
+                        <div class="material-icon">📦</div>
+                        <div class="material-info">
+                            <span class="material-type">Other</span>
+                            <span id="other-count" class="material-count">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Button -->
+            <div class="profile-actions">
+                <a id="view-content-btn" href="#" class="btn btn-primary btn-large">View Content</a>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading-section" style="display: none;">
+            <div class="loading-spinner">
+                <p>Loading teacher profile...</p>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error-section" style="display: none;">
+            <div class="error-message">
+                <h3>Teacher Not Found</h3>
+                <p id="error-text">The teacher profile could not be found.</p>
+                <a href="index.html" class="btn btn-secondary">Back to Home</a>
+            </div>
+        </div>
+    </main>
+
+
+        <!-- Firebase core -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+<!-- Firebase Config -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/view.js"></script>
+</body>
+</html>

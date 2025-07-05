@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeacherShare - View Resources</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>TeacherShare</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="auth.html" class="nav-link">Create Class</a>
+                </li>
+                <li class="nav-item">
+                    <a href="coffee.html" class="nav-link">Buy Me a Coffee</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="view-container">
+        <!-- Teacher ID Prompt -->
+        <div id="prompt" class="prompt-section">
+            <div class="prompt-wrapper">
+                <h2 class="prompt-title">Enter Teacher ID</h2>
+                <form id="teacher-id-form" class="prompt-form">
+                    <div class="form-group">
+                        <label for="teacher-id">Teacher ID</label>
+                        <input type="text" id="teacher-id" name="teacherId" placeholder="Enter teacher's unique ID" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">View Content</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Content Display -->
+        <div id="content" class="content-section" style="display: none;">
+            <div class="content-header">
+                <h2 class="content-title">Teacher Resources</h2>
+                <p class="teacher-info">Teacher ID: <span id="current-teacher-id"></span></p>
+            </div>
+            
+            <!-- Sections Grid -->
+            <div id="sections-grid" class="sections-grid">
+                <!-- Section cards will be dynamically rendered here -->
+            </div>
+            
+            <!-- Expanded Section Modal/Overlay -->
+            <div id="section-modal" class="section-modal" style="display: none;">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 id="modal-section-title"></h3>
+                        <button id="close-modal" class="btn btn-close">&times;</button>
+                    </div>
+                    <div id="modal-items" class="modal-items">
+                        <!-- Items will be rendered here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading-section" style="display: none;">
+            <div class="loading-spinner">
+                <p>Loading resources...</p>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div id="error" class="error-section" style="display: none;">
+            <div class="error-message">
+                <h3>Error</h3>
+                <p id="error-text"></p>
+                <button id="retry-btn" class="btn btn-secondary">Try Again</button>
+            </div>
+        </div>
+    </main>
+
+
+        <!-- Firebase core -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+<!-- Firebase Config -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/data.js"></script>
+    <script src="../js/view.js"></script>
+</body>
+</html>

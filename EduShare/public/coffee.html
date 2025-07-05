@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeacherShare - Buy Me a Coffee</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>TeacherShare</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="auth.html" class="nav-link">Create Class</a>
+                </li>
+                <li class="nav-item">
+                    <a href="coffee.html" class="nav-link active">Buy Me a Coffee</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Coffee Section -->
+    <main class="coffee-container">
+        <div class="coffee-wrapper">
+            <div class="coffee-content">
+                <h1 class="coffee-title">Buy Me a Coffee</h1>
+                <p class="coffee-description">
+                    If you find TeacherShare helpful, consider supporting the project! 
+                    Your support helps keep the platform free for all teachers and students.
+                </p>
+
+                <!-- UPI QR Code -->
+                <div class="payment-section">
+                    <h2 class="payment-title">UPI Payment</h2>
+                    <div class="qr-container">
+                        <img src="assets/upi-qr.png" alt="UPI QR Code for Payment" class="qr-code">
+                        <p class="qr-text">Scan the QR code with any UPI app</p>
+                    </div>
+                </div>
+
+                <!-- Payment Buttons -->
+                <div class="payment-buttons">
+                    <a href="upi://pay?pa=your-upi@bank&pn=DevName" class="btn btn-primary payment-btn">
+                        <span class="btn-icon">📱</span>
+                        Pay with UPI
+                    </a>
+                    
+                    <a href="https://paypal.me/YourPayPal" target="_blank" class="btn btn-secondary payment-btn">
+                        <span class="btn-icon">💳</span>
+                        Pay with PayPal
+                    </a>
+                </div>
+
+                <!-- Thank You Message -->
+                <div class="thank-you-section">
+                    <p class="thank-you-text">
+                        Thank you for supporting TeacherShare! Every contribution helps us maintain 
+                        and improve the platform for educators worldwide.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <!-- Firebase core -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+<!-- Firebase Config -->
+    <script src="../js/firebase-config.js"></script>
+</body>
+</html>

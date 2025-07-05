@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeacherShare - Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>TeacherShare</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="auth.html" class="nav-link">Create Class</a>
+                </li>
+                <li class="nav-item">
+                    <a href="coffee.html" class="nav-link">Buy Me a Coffee</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-container">
+        <div class="dashboard-wrapper">
+            <h1 class="dashboard-title">Your Dashboard</h1>
+            
+            <!-- Add Section Form -->
+            <div class="add-section-form">
+                <form id="add-section-form">
+                    <div class="form-group">
+                        <label for="section-name">Section Name</label>
+                        <input type="text" id="section-name" name="sectionName" placeholder="Enter section name" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Add Section</button>
+                </form>
+            </div>
+
+            <!-- Sections Container -->
+            <div id="sections" class="sections-container">
+                <!-- Sections will be dynamically rendered here by JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Authentication Guard -->
+    <script>
+        // Basic auth guard - redirect if not authenticated
+        // This will be enhanced by auth.js
+        if (!localStorage.getItem('teacherAuth')) {
+            // Temporary check - auth.js will handle proper Firebase Auth
+        }
+    </script>
+
+
+
+    <!-- Firebase core -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<!-- Firebase Auth -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+
+<!-- Firebase Config -->
+    <script src="../js/firebase-config.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/data.js"></script>
+</body>
+</html>
